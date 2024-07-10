@@ -33,7 +33,7 @@ const PlacesCard = ({ singleProduct, addToCart }) => {
 
                 {/* Product Price and Description */}
                 <div className="flex flex-col sm:flex-row justify-between items-center">
-                    <p className="font-bold text-base sm:text-lg text-gray-900">${singleProduct.price}</p>
+                    <p className="font-bold text-base sm:text-lg text-gray-900">N{singleProduct.price}</p>
                     <p className="line-clamp-2 sm:ml-2 text-gray-700">{singleProduct.description}</p>
                 </div>
 

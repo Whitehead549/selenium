@@ -161,7 +161,7 @@ const Cart = () => {
                                         </div>
                                         <div className="mb-4 lg:mb-0">
                                             <span className="font-medium text-lg lg:text-xl">Total Price to Pay:</span>
-                                            <span className="font-bold text-lg lg:text-xl text-green-500">$ {totalPrice}</span>
+                                            <span className="font-bold text-lg lg:text-xl text-green-500">N {totalPrice}</span>
                                         </div>
                                     </div>
                                     <button
