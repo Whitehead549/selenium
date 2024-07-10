@@ -45,7 +45,7 @@ export const IndividualCartProduct = ({ cartProduct, cartProductIncrease, cartPr
             {cartProduct.title}
           </div>
           <div className="text-xl font-bold text-green-600">
-            N {cartProduct.price}
+            $ {cartProduct.price}
           </div>
         </div>
         <div className="text-gray-600 text-sm mb-4 line-clamp-2">
@@ -71,7 +71,7 @@ export const IndividualCartProduct = ({ cartProduct, cartProductIncrease, cartPr
             </div>
           </div>
           <div className="text-lg font-bold text-blue-600">
-            N {cartProduct.TotalProductPrice}
+            $ {cartProduct.TotalProductPrice}
           </div>
         </div>
         <button 

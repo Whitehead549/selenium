@@ -12,13 +12,13 @@ const PlacesCard = ({ singleProduct, addToCart }) => {
     };
 
     return (
-        <div className="relative shadow-lg transition-all duration-500 hover:shadow-xl cursor-pointer rounded-lg overflow-hidden bg-white p-1">
+        <div className="relative shadow-lg transition-all duration-500 hover:shadow-xl cursor-pointer rounded-lg overflow-hidden bg-white p-1 lg:max-h-[500px]">
             {/* Product Image */}
             <div className="aspect-w-16 aspect-h-6 sm:aspect-w-16 sm:aspect-h-9">
                 <img
                     src={singleProduct.url}
                     alt="product-img"
-                    className="object-cover w-full h-full transform transition duration-700 hover:scale-110"
+                    className="object-cover w-full h-60 transform transition duration-700 hover:scale-110"
                 />
             </div>
 
@@ -59,4 +59,5 @@ const PlacesCard = ({ singleProduct, addToCart }) => {
 };
 
 export default PlacesCard;
+
 
