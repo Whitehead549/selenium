@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import LogoImg from "../../assets/logo.png"; 
 import { FaCaretDown } from 'react-icons/fa';
-import { HiMenuAlt1, HiMenuAlt3 } from 'react-icons/hi';
+import {HiMenuAlt3 } from 'react-icons/hi';
+import { FaRegWindowClose } from "react-icons/fa";
 import { Icon } from 'react-icons-kit';
 import { shoppingCart } from 'react-icons-kit/feather/shoppingCart';
 import ResponsiveMenu from "./ResponsiveMenu";
@@ -22,33 +23,28 @@ const DropdownLinks = [
   },
 ];
 
-const Navbar = ({usee, totalQty}) => {
+const Navbar = ({ usee, totalQty }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  // console.log(totalQty);
-  // console.log(usee);
-
   return (
-    
     <>
-      
-      <div className='fixed top-0 right-0 w-full bg-white text-black shadow-md z-[99999]'>
+      <div className='fixed top-0 right-0 w-full bg-gray-900 text-white shadow-md z-[99999] font-sans antialiased'>
         {/* Top Bar (Optional) */}
         <div className="bg-gradient-to-r from-primary to-secondary text-white">
           <div className="container py-[2px] sm:block hidden">
             <div className='flex justify-between'>
               <p>20% off on next booking</p>
-              <p>Mobile No. +2348181287661</p>
+              <p>Mobile No. +234 8052875298</p>
             </div>
           </div>
-        </div> 
+        </div>
 
         {/* Main Navbar */}
-        <div className="container py-3 sm:py-0 bg-white">
+        <div className="container py-3 sm:py-0 bg-gray-900">
           <div className="flex justify-between items-center">
             {/* Logo Section */}
             <div>
@@ -56,7 +52,7 @@ const Navbar = ({usee, totalQty}) => {
                 <img src={LogoImg} alt='' className='h-14' />
               </Link>
             </div>
-            
+
             {/* Desktop Navlinks */}
             <div className="hidden md:block">
               <ul className='flex items-center gap-6'>
@@ -99,7 +95,7 @@ const Navbar = ({usee, totalQty}) => {
                 {/* Dropdown */}
                 <li className="py-4 relative group cursor-pointer">
                   <div className="dropdown flex items-center">
-                    <span className="hover:text-primary transition-colors duration-300">Quick Links</span> 
+                    <span className="hover:text-primary transition-colors duration-300">Quick Links</span>
                     <span>
                       <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
                     </span>
@@ -118,43 +114,44 @@ const Navbar = ({usee, totalQty}) => {
                       ))}
                     </ul>
                   </div>
-                </li> 
+                </li>
               </ul>
             </div>
 
-            {/* cart Products*/}
+            {/* Cart Products */}
             <div className='flex items-center gap-4'>
-            
-            <div>
-            
-            <NavLink  
-              to="/cart" onClick={() => window.scrollTo(0, 0)} className="text-[#009c9f] transform transition-transform duration-300 hover:scale-110">
-              <Icon icon={shoppingCart} size={30} />
-            </NavLink>
-            <span className='cart-indicator'>{totalQty}</span>
-            </div>
+              <div>
+                <NavLink  
+                  to="/cart" 
+                  onClick={() => window.scrollTo(0, 0)} 
+                  className="text-[#009c9f] transform transition-transform duration-300 hover:scale-110"
+                >
+                  <Icon icon={shoppingCart} size={30} />
+                </NavLink>
+                <span className='cart-indicator'>{totalQty}</span>
+              </div>
 
               {/* Mobile Hamburger Menu */}
               <div className="md:hidden block">
                 {showMenu ? (
-                  <HiMenuAlt1
+                  <FaRegWindowClose 
                     onClick={toggleMenu}
-                    className="cursor-pointer transition-all"
+                    className="cursor-pointer transition-all text-white"
                     size={30}
                   />
                 ) : (
                   <HiMenuAlt3
                     onClick={toggleMenu}
-                    className="cursor-pointer transition-all"
+                    className="cursor-pointer transition-all text-white"
                     size={30}
                   />
                 )}
               </div>
-            </div> 
+            </div>
           </div>
         </div>
         {/* Responsive Menu */}
-        <ResponsiveMenu setShowMenu={setShowMenu} showMenu={showMenu} usee={usee}/>
+        <ResponsiveMenu setShowMenu={setShowMenu} showMenu={showMenu} usee={usee} />
       </div>
     </>
   );
