@@ -18,7 +18,7 @@ const PlacesCard = ({ singleProduct, addToCart }) => {
             <img
                 src={singleProduct.url}
                 alt="product-img"
-                className="object-cover w-full h-40 sm:h-60 transform transition duration-700 hover:scale-110"
+                className="object-cover w-full h-40 sm:h-40 transform transition duration-700 hover:scale-110"
             />
         </div>
     
