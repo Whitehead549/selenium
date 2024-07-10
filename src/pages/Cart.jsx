@@ -151,9 +151,9 @@ const Cart = () => {
                                     cartProductDecrease={cartProductDecrease}
                                 />
                             </div>
-                            <div className="mx-auto p-4 lg:p-8">
-                                <div className="w-full bg-gray-100 shadow-lg rounded-lg p-6 lg:p-12 mt-0 lg:mt-0">
-                                    <h5 className="text-xl lg:text-3xl font-semibold mb-4">Cart Summary</h5>
+                            <div className="mx-auto p-2 lg:p-4">
+                                <div className="w-full bg-gray-100 shadow-lg rounded-lg p-2 lg:p-12 mt-0 lg:mt-0">
+                                    <h5 className="text-xl lg:text-3xl font-semibold mb-2">Cart Summary</h5>
                                     <div className="lg:flex lg:justify-between lg:items-center">
                                         <div className="mb-2 lg:mb-0">
                                             <span className="font-medium text-lg lg:text-xl">Total No of Products:</span>
@@ -161,7 +161,7 @@ const Cart = () => {
                                         </div>
                                         <div className="mb-4 lg:mb-0">
                                             <span className="font-medium text-lg lg:text-xl">Total Price to Pay:</span>
-                                            <span className="font-bold text-lg lg:text-xl text-green-500">$ {totalPrice}</span>
+                                            <span className="font-bold text-lg lg:text-xl text-green-500">N{totalPrice}</span>
                                         </div>
                                     </div>
                                     <button
