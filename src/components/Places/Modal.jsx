@@ -55,7 +55,7 @@ export const Modal = ({ TotalPrice, totalQty, hideModal }) => {
         });
 
         // Create a WhatsApp link with the message
-        const whatsappLink = `https://api.whatsapp.com/send?phone=+234818128766&text=${encodeURIComponent(message)}`;
+        const whatsappLink = `https://api.whatsapp.com/send?phone=+2348181287661&text=${encodeURIComponent(message)}`;
 
         // Open the WhatsApp link
         window.open(whatsappLink, '_blank');
