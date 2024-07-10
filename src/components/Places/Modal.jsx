@@ -84,80 +84,81 @@ export const Modal = ({ TotalPrice, totalQty, hideModal }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black bg-opacity-50">
-      <div className="relative bg-white rounded-lg shadow-lg max-w-md w-full">
-        <div className="absolute top-0 right-0 mt-4 mr-4 text-red-600 cursor-pointer" onClick={handleCloseModal}>
-          <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M14.348 14.849a1 1 0 0 1-1.414 1.415L10 11.414l-2.929 2.83a1 1 0 1 1-1.415-1.415l2.828-2.828L5.636 7.636a1 1 0 1 1 1.415-1.415l2.83 2.828 2.828-2.828a1 1 0 0 1 1.415 1.415l-2.828 2.828 2.828 2.829z" />
-          </svg>
-        </div>
-
-        <div className="p-6">
-          <h2 className="text-xl font-bold mb-4">Cash On Delivery Details</h2>
-
-          <form className="space-y-4" onSubmit={handleCashOnDelivery}>
-            <div>
-              <label htmlFor="cell" className="block text-sm font-medium text-gray-700">
-                Cell Number
-              </label>
-              <input
-                type="number"
-                id="cell"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                placeholder="Enter your cell number"
-                required
-                value={cell || ''}
-                onChange={(e) => setCell(e.target.value)}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="residentialAddress" className="block text-sm font-medium text-gray-700">
-                Residential Address
-              </label>
-              <input
-                type="text"
-                id="residentialAddress"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                placeholder="Enter your residential address"
-                required
-                value={residentialAddress}
-                onChange={(e) => setResidentialAddress(e.target.value)}
-              />
-            </div>
-
-            <div className="flex justify-between">
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Total Quantity</label>
-                <input
-                  type="text"
-                  className="mt-1 block w-32 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-100"
-                  readOnly
-                  value={cartQty}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Total Price</label>
-                <input
-                  type="text"
-                  className="mt-1 block w-32 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-100"
-                  readOnly
-                  value={cartPrice}
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                className="inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+  <div className="relative bg-white rounded-lg shadow-lg w-full max-w-xs sm:max-w-md">
+    <div className="absolute top-0 right-0 mt-4 mr-4 text-red-600 cursor-pointer" onClick={handleCloseModal}>
+      <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M14.348 14.849a1 1 0 0 1-1.414 1.415L10 11.414l-2.929 2.83a1 1 0 1 1-1.415-1.415l2.828-2.828L5.636 7.636a1 1 0 1 1 1.415-1.415l2.83 2.828 2.828-2.828a1 1 0 0 1 1.415 1.415l-2.828 2.828 2.828 2.829z" />
+      </svg>
     </div>
+
+    <div className="p-6">
+      <h2 className="text-xl font-bold mb-4">Cash On Delivery Details</h2>
+
+      <form className="space-y-4" onSubmit={handleCashOnDelivery}>
+        <div>
+          <label htmlFor="cell" className="block text-sm font-medium text-gray-700">
+            Cell Number
+          </label>
+          <input
+            type="number"
+            id="cell"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Enter your cell number"
+            required
+            value={cell || ''}
+            onChange={(e) => setCell(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="residentialAddress" className="block text-sm font-medium text-gray-700">
+            Residential Address
+          </label>
+          <input
+            type="text"
+            id="residentialAddress"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Enter your residential address"
+            required
+            value={residentialAddress}
+            onChange={(e) => setResidentialAddress(e.target.value)}
+          />
+        </div>
+
+        <div className="flex justify-between">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Total Quantity</label>
+            <input
+              type="text"
+              className="mt-1 block w-32 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-100"
+              readOnly
+              value={cartQty}
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Total Price</label>
+            <input
+              type="text"
+              className="mt-1 block w-32 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-100"
+              readOnly
+              value={cartPrice}
+            />
+          </div>
+        </div>
+
+        <div className="flex justify-end">
+          <button
+            type="submit"
+            className="inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
   );
 };

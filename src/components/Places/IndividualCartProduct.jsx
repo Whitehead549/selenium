@@ -31,58 +31,56 @@ export const IndividualCartProduct = ({ cartProduct, cartProductIncrease, cartPr
   }
 
   return (
-    <div className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden p-4 mb-4 transform transition duration-500 hover:scale-105">
-  <div className="flex items-center mb-4">
-    <img 
-      className="w-1/4 md:w-1/5 h-auto object-contain rounded-lg mr-4" 
-      src={cartProduct.url} 
-      alt="product-img" 
-    />
-    <div className="flex-1">
-      <div className="flex flex-wrap mb-2">
-        <div className="text-lg font-semibold mr-4">
-          {cartProduct.title}
+    <div className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 mb-0 transform transition duration-500 hover:scale-105">
+      <div className="md:w-1/4 flex-shrink-0 mb-0 md:mb-0">
+        <img 
+          className="w-full h-32 object-contain rounded-lg" 
+          src={cartProduct.url} 
+          alt="product-img" 
+        />
+      </div>
+      <div className="flex flex-col justify-between p-4 md:pl-6 w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-0">
+          <div className="text-lg font-semibold">
+            {cartProduct.title}
+          </div>
+          <div className="text-xl font-bold text-green-600">
+            N {cartProduct.price}
+          </div>
         </div>
-        <div className="text-xl font-bold text-green-600 mr-4">
-          N {cartProduct.price}
-        </div>
-        <div className="text-gray-600 text-sm line-clamp-2 mr-4">
+        <div className="text-gray-600 text-sm mb-4 line-clamp-2">
           {cartProduct.description}
         </div>
-      </div>
-      <div className="flex items-center space-x-2 mb-2">
-        <span className="text-gray-600 text-sm">Quantity</span>
-        <div className="flex items-center border border-gray-300 rounded-lg">
-          <button 
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-l-lg p-2" 
-            onClick={handleCartProductDecrease}
-          >
-            <Icon icon={minus} size={16} />
-          </button>
-          <div className="px-4 text-sm">{cartProduct.qty}</div>
-          <button 
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-r-lg p-2" 
-            onClick={handleCartProductIncrease}
-          >
-            <Icon icon={plus} size={16} />
-          </button>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+          <div className="flex items-center space-x-2">
+            <span className="text-gray-600 text-sm">Quantity</span>
+            <div className="flex items-center border border-gray-300 rounded-lg">
+              <button 
+                className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-l-lg p-2" 
+                onClick={handleCartProductDecrease}
+              >
+                <Icon icon={minus} size={16} />
+              </button>
+              <div className="px-4 text-sm">{cartProduct.qty}</div>
+              <button 
+                className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-r-lg p-2" 
+                onClick={handleCartProductIncrease}
+              >
+                <Icon icon={plus} size={16} />
+              </button>
+            </div>
+          </div>
+          <div className="text-lg font-bold text-blue-600">
+            N {cartProduct.TotalProductPrice}
+          </div>
         </div>
-      </div>
-      <div className="flex items-center mb-2">
-        <span className="text-gray-600 text-sm">Total Price:</span>
-        <span className="text-lg font-bold text-blue-600 ml-2">
-          N {cartProduct.TotalProductPrice}
-        </span>
+        <button 
+          className="self-end bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg" 
+          onClick={handleCartProductDelete}
+        >
+          DELETE
+        </button>
       </div>
     </div>
-  </div>
-  <button 
-    className="self-end bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg"
-    onClick={handleCartProductDelete}
-  >
-    DELETE
-  </button>
-</div>
-
   );
 };
