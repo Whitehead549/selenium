@@ -124,7 +124,7 @@ const Navbar = ({ usee, totalQty }) => {
                 <NavLink  
                   to="/cart" 
                   onClick={() => window.scrollTo(0, 0)} 
-                  className="text-[#009c9f] transform transition-transform duration-300 hover:scale-110"
+                  className="text-green-700 transform transition-transform duration-300 hover:scale-110"
                 >
                   <Icon icon={shoppingCart} size={30} />
                 </NavLink>
