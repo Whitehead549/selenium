@@ -38,7 +38,7 @@ const Navbar = ({ usee, totalQty }) => {
           <div className="container py-[2px] sm:block hidden">
             <div className='flex justify-between'>
               <p>20% off on next booking</p>
-              <p>Mobile No. +234 8052875298</p>
+              <p>Mobile No. +234 8181287661</p>
             </div>
           </div>
         </div>

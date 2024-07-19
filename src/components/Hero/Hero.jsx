@@ -1,4 +1,7 @@
 import React from 'react';
+import { IoLogoWhatsapp } from "react-icons/io";
+import whatsapp from "../../assets/whatsapp.png";
+
 
 
 const Hero = () => {
@@ -9,79 +12,27 @@ const Hero = () => {
                 p-4 bg-primary/10'>
                     <div className='container grid grid-cols-1 gap-4'>
                         {/* text content section */}
-                        <div className='text-white'>
-                        <p data-aos="fade-up" className="text-sm">Our packages</p>
+                        <div className='text-white pt-8 font-bold'>
+                        <p data-aos="fade-up" className="text-md">
+                        Chat Engr on <span className="text-green-600">WhatApp</span>
+                        </p>
+
                         <p
                         data-aos="fade-up"
                         data-aos-delay="300"
-                        className="font-bold text-3xl"
+                        className="font-bold text-2xl"
                         >
-                            Download Quotation
+                            For our Inverter Quotation
                         </p>
                         </div>
-                        {/* form section */}
-                        <div  data-aos="fade-up"
-                        data-aos-delay="600"
-                        className="space-y-4 bg-white rounded-md
-                             p-5 relative">
-                            {/* <div className='grid grid-cols-1 sm:grid-cols-3
-                                py-3'>
-                                <div>
-                                    <label htmlFor='destination'
-                                    className='opacity-70'>
-                                        Search your Destination
-                                    </label>
-                                    <input
-                                    type='text'
-                                    name="destination"
-                                    id='destination'
-                                    placeholder='Dubai'
-                                    className='w-full bg-gray-100 my-2 range
-                                    accent-primary focus:outline-primary
-                                    focus:outline outline-1 rounded-full p-2' 
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor='destination'
-                                    className='opacity-70'>
-                                        Date
-                                    </label>
-                                    <input
-                                        type='date'
-                                        name="destination"
-                                        className="w-full !placeholder-slate-400
-                                        bg-gray-100 my-2 rounded-full
-                                        focus:outline-primary focus:outline
-                                        outline-1 p-2"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="destination" className="opacity-70 block">
-                                        <div className="w-full flex justify-between items-center">
-                                            <p>Max Price</p>
-                                            <p className="font-bold text-xl">$ {priceValue}</p>
-                                        </div>
-                                    </label>
-                                    <div className=" bg-gray-100 rounded-full p-2 flex items-center justify-center ">
-                                        <input
-                                            type="range"
-                                            name="destination"
-                                            id="destination"
-                                            className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2"
-                                            min="150"
-                                            max="1000"
-                                            value={priceValue}
-                                            step="10"
-                                            onChange={(e) => setPriceValue(e.target.value)}
-                                        />
-                                    </div>
-                                </div>
-                            </div>                     */}
-                        
-                            <button className="bg-gradient-to-r from-primary to-secondary text-white hover:scale-105 px-4 py-2 rounded-full duration-200 absolute -bottom-5 left-1/2 -translate-x-1/2">
-                            Click here
-                            </button>
+                                                                                    
+                        <div data-aos="fade-up" data-aos-delay="600" className="flex items-center space-x-2">
+                            <a href="https://wa.me/+2348181287661?text=Greeting%20engr" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                                <span className="text-blue-600 underline font-bold text-lg sm:text-lg md:text-lg lg:text-lg cursor-pointer">Click here</span>
+                                <img src={whatsapp} alt="Banner" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
+                            </a>
                         </div>
+
 
                     </div>
                 </div>
